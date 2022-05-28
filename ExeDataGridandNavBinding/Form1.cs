@@ -39,8 +39,21 @@ namespace ExeDataGridandNavBinding
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Form2 yamzed = new Form2();
-            yamzed.Show();
+            // Membuat Code Login 
+
+            if (textBox1.Text.Equals("") || textBox2.Text.Equals(""))
+            {
+                MessageBox.Show("Data Tidak Boleh Kosong");
+            }
+            else if (textBox1.Text.Equals("Wira") && textBox2.Text.Equals("tama"))
+            {
+                Form2 yamzed = new Form2();
+                yamzed.Show();
+            }
+            else
+            {
+                MessageBox.Show("Username dan Password Anda salah !!!!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
